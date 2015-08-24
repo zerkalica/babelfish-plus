@@ -1,9 +1,6 @@
 import Babelfish from 'babelfish'
-
 import mapTokens from './mapTokens'
 import plainObject from './plainObject'
-import __debug from 'debug'
-const debug = __debug('babelfish-plus:Translator:debug')
 
 export default class Translator {
     constructor({locale, phrases}: {

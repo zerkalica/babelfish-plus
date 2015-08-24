@@ -1,13 +1,22 @@
-import React, {createElement} from 'react'
+import React, {PropTypes, createElement} from 'react'
+const {func} = PropTypes
+
+function pass(message) {
+    return [message]
+}
 
 export default class T extends React.Component {
     static propTypes = {
-        t: React.PropTypes.func
+        t: func
     }
 
-    static defaultProps = {
-        t(message) {
-            return [message]
+    static contextTypes = {
+        t: func
+    }
+
+    getDefaultProps() {
+        return {
+            t: this.props.t || this.context.t || pass
         }
     }
 
