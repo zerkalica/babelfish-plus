@@ -6,6 +6,8 @@ function pass(message) {
 }
 
 export default class T extends React.Component {
+    _t: func = null
+
     static propTypes = {
         t: func
     }
@@ -14,14 +16,9 @@ export default class T extends React.Component {
         t: func
     }
 
-    getDefaultProps() {
-        return {
-            t: this.props.t || this.context.t || pass
-        }
-    }
-
-    _t(message, params) {
-        return this.props.t(message, params)
+    constructor(props, context) {
+        super(props, context)
+        this._t = props.t || context.t || pass
     }
 
     render() {
