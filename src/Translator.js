@@ -26,4 +26,8 @@ export default class Translator {
     t(message: string, params: ?Map<string, string|object|func>): Array<string|object|func>|string {
         return mapTokens(this._t, message, params || {})
     }
+
+    has(message) {
+        return this._babelfish.hasPhrase(this._locale, message)
+    }
 }
