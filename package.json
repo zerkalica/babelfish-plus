@@ -1,6 +1,6 @@
 {
   "name": "babelfish-plus",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Babelfish based i10n",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "babel-runtime": "^5.8.25",
+    "babelfish": "^1.1.1",
     "debug": "^2.2.0",
     "react": "^0.14.0"
   },
