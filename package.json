@@ -40,7 +40,7 @@
     "babel-runtime": "^5.8.25",
     "babelfish": "^1.1.1",
     "debug": "^2.2.0",
-    "react": "^0.14.0"
+    "react": "^15.x.x"
   },
   "devDependencies": {
     "babel": "^5.8.23",
